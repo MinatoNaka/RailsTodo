@@ -1,31 +1,24 @@
-docker-compose settings for Ruby on Rails
+# README
 
-・このリポジトリをcloneする
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-・rails newでRailsインストール
-`docker-compose run web rails new . --force --no-deps --database=postgresql`
+Things you may want to cover:
 
-・dockerビルド
-`docker-compose build`
+* Ruby version
 
-・DBコネクション設定
+* System dependencies
 
-```
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-+  host: db
-+  username: postgres
-+  password: password
-```
+* Configuration
 
-・DB作成
-`docker-compose run web rake db:create`
+* Database creation
 
-・コンテナ起動
-`docker-compose up -d`
+* Database initialization
 
-・http://localhost:3000 でアクセスしたらホーム画面が表示される
+* How to run the test suite
 
+* Services (job queues, cache servers, search engines, etc.)
 
+* Deployment instructions
+
+* ...
